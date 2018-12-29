@@ -1,0 +1,29 @@
+<h1 class="text-center mt-4">Ideas de {{author}}</h1>
+
+<div class="row justify-content-center">
+
+{{#each ideas}}
+
+    <div class="card text-center my-4 w-75">
+        <div class="card-header">
+            <h4>{{title}}</h4>
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">Details</h5>
+            <p class="card-text">{{details}}</p>
+            <a href="/ideas/edit/{{id}}" class="btn btn-warning my-2 btn-block">Edit</a>
+            <form action="/ideas/{{id}}?_method=DELETE" method="POST">
+                <input type="hidden" name="_method" value="DELETE">
+                <input type="submit" class="btn btn-dark my-2 btn-block" value="Delete">
+            </form>
+        </div>
+        <div class="card-footer text-muted">
+           {{date}}
+        </div>
+    </div>
+
+{{else}}
+    <p>No video ideas listed</p>
+{{/each}}
+
+</div>

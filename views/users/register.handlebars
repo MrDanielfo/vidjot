@@ -1,0 +1,31 @@
+{{> _errors}}
+
+
+<div class="row">
+    <div class="col-md-6 mx-auto mt-3">
+        <div class="card card-body account-container">
+            <h3 class="text-center">Account Register</h3>
+
+            <form action="/users/register" method="POST">
+                <div class="form-group">
+                    <label for="nameUser">Name</label>
+                    <input type="text" name="nameUser" class="form-control" placeholder="Name" value="{{nameUser}}" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" class="form-control" placeholder="Email" value="{{email}}" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" name="password" class="form-control" placeholder="Password" required>
+                </div>
+                <div class="form-group">
+                    <label for="password2">Confirm</label>
+                    <input type="password" name="password2" class="form-control" placeholder="Confirm Password" required>
+                </div>
+                <button type="submit" class="btn btn-danger">Login</button>
+            </form>
+
+        </div>
+    </div>
+</div>
